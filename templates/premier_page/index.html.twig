@@ -1,0 +1,111 @@
+{#<!DOCTYPE html>
+<html lang="eng">
+      <head charset="UTF-8">
+      <meta name="viewport" content="width=divice-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <title>mon Apk </title>
+      <body>
+      <a href="{{path('hello',{'prenoms' : 'Lior', 'age':31})}}">Allez voir hello</a>{#indraindrai miova ny route d l name no
+       atao mapiasa fction path()#}
+       {% extends 'base.html.twig' %}
+
+
+       {% block body %}
+       {#   <h1>{{title | upper}}</h1>
+         <p>Comment allez vous!?</p>
+         {% if age >= 18 %}
+          <p>Vous etes adulte !</p>
+           {% elseif age >= 18 %}
+          <p>Vous etes adolescent !</p>
+           {% else %}
+          <p>Vous etes enfant !</p>
+           {% endif %}
+
+           {# ilay | upper filtre manao uppercase
+           <ul>
+            {% for compteur in 0..10 %}
+            <li>{{compteur}}
+            {% endfor %}
+           </ul>
+            
+            {% for prenom, age in tableau %}
+               {% if loop.first %}
+                  <strong>{{prenom}} a {{age}} ans</strong> 
+                {% elseif loop.last %}
+                  <em>{{prenom}} a {{age}} ans</em>
+                 {% else %}
+                  <p>{{prenom}} a {{age}} ans</p>
+                 {% endif %}
+            {% endfor %}
+               
+        </body>
+       </html>#}
+ <div class="container mt-3">
+        <div class="mt-4 mb-4 p-5 bg-primary text-white rounded">
+             <h1>Vous etes sur mon site</h1> 
+             <h1>Jumbotron Example</h1> 
+             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod 
+              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
+              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat..</p> 
+              <input type="submit" class="btn btn-success" value="Submit Button">
+         </div>
+  
+         <h2>Nos appartement </h2> 
+
+    <div class="row mt-4">
+      <div class="col-md-4">
+         <div class="card text-white bg-primary mb-3 ">
+          <div class="card-header text-center">chambre <strong>1$/nuit</strong><br>
+          <small>indisponible</small>
+          </div>
+          <img src="http://placehold.hit/1000*400" style="height:200px , width:100%,display:block" 
+          alt=""> 
+
+            <div class="card-body">
+               <h4 class="card-title">Apparte</h4>
+                 <p class="card-text">Some quick example text to build on the card title and make 
+                  up the bulk of the card's content  up the bulk of the card's content.</p>
+                  <a href="#" class="btn btn-success">En savoir plus</a>
+             </div>
+           </div>
+       </div>
+
+       <div class="col-md-4">
+        <div class="card text-white bg-primary mb-3 ">
+         <div class="card-header text-center">chambre <strong>1$/nuit</strong><br>
+         <small>indisponible</small>
+         </div>
+         <img src="http://placehold.it/1000*400" style="height:200px , width:100%,display:block" 
+         alt=""> 
+
+           <div class="card-body">
+              <h4 class="card-title">Apparte</h4>
+                <p class="card-text">Some quick example text to build on the card title and make 
+                 up the bulk of the card's content  up the bulk of the card's content.</p>
+                 <a href="#" class="btn btn-success">En savoir plus</a>
+            </div>
+          </div>
+      </div>
+
+      <div class="col-md-4">
+         <div class="card text-white bg-primary mb-3 ">
+          <div class="card-header text-center">chambre <strong>1$/nuit</strong><br>
+          <small>indisponible</small>
+          </div>
+          <img src="http://placehold.hit/1000*400" style="height:200px , width:100%,display:block" 
+          alt=""> 
+
+            <div class="card-body">
+               <h4 class="card-title">Apparte</h4>
+                 <p class="card-text">Some quick example text to build on the card title and make 
+                  up the bulk of the card's content  up the bulk of the card's content.</p>
+                  <a href="#" class="btn btn-success">En savoir plus</a>
+             </div>
+           </div>
+       </div>
+ </div>
+ </div>
+         {% endblock %}
+
+
+
