@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Nos annonces{% endblock %}
+
+{% block body %}
+<div class="container">
+   <h1>Voici les annonces de nos hotes</h1>
+ 
+   <div class="row">
+    {% for ad in ads %}
+      {% set url = path('ads_show', {'slug':ad.slug}) %}
+    <div class="col-md-4">
+        <div class="card text-white bg-primary mb-3 ">
+         <div class="card-header text-center">{{ad.rooms}}chambres <strong>{{ad.price}}/nuit</strong><br>
+         <small>indisponible</small>
+         </div>
+       <a href="{{url}}">
+         <img src="{{ad.coverImage}}" style="height:200px ; width: 100%;display:block" 
+         alt=""> 
+           </a> {#ialan aminy fiverenana na met miova ny anaran route d soloina fonction set en ambony#}  
+           <div class="card-body">
+            <a href="{{url}}">
+              <h4 class="card-title">{{ad.tittle}}</h4> </a>
+                <p class="card-text">{{ad.introduction}}</p>
+               
+                 <a href="{{ url }}" class="btn btn-success">En savoir plus</a>
+            </div>
+          </div>
+      </div>
+      {% endfor %}
+   </div>
+</div>
+{% endblock %}
